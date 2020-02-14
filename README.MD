@@ -1,20 +1,9 @@
-# Mirar
-version: "3"
-services:
-  agenda:
-    image: node:10
-    command: npm test
-    working_dir: /usr/src/app
-    volumes:
-      - ./:/usr/src/app
-    environment:
-      - MONGODB_HOST=mongodb
-    links:
-      - mongodb
 
-  mongodb:
-    image: mongo:latest
-    ports:
-      - "27017"
-    command:
-      - --storageEngine=wiredTiger
+# 1. Configuración
+- [Para programar las tareas con cron](https://crontab.guru/)
+- setear user y password en el objeto settings
+
+# 2. Ejecutar
+- npm run go
+
+# 3. Enjoy!!
